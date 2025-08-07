@@ -1,10 +1,11 @@
 import json
+
 import pytest
 from langchain_core.messages import HumanMessage
 from langsmith import Client
 from openevals.llm import create_llm_as_judge
-from agents.simple_text2sql import agent
 
+from agents.simple_text2sql import agent
 
 # Setup LangSmith client
 client = Client()
