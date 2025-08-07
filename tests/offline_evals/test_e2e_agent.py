@@ -6,7 +6,6 @@ from openevals.llm import create_llm_as_judge
 from agents.simple_text2sql import agent
 
 
-
 # Setup LangSmith client
 client = Client()
 
