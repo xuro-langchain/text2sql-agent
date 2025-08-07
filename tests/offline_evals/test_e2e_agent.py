@@ -1,7 +1,5 @@
 import json
-
 import pytest
-import dotenv
 from langchain_core.messages import HumanMessage
 from langsmith import Client
 from openevals.llm import create_llm_as_judge
@@ -9,7 +7,6 @@ from openevals.llm import create_llm_as_judge
 from agents.simple_text2sql import agent
 
 
-dotenv.load_dotenv()
 
 # Setup LangSmith client
 client = Client()
