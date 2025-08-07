@@ -17,22 +17,6 @@ This repository uses a modern CI/CD pipeline with GitHub Actions for automated t
   - E2E tests
   - Evaluation tests (PR only)
 
-### 2. Preview Deployment (`preview-deployment.yml`)
-- **Trigger:** PR opened, synchronized, or reopened
-- **Purpose:** Create/update preview deployments for PR testing
-- **Jobs:**
-  - Build Docker image with tag `preview-<pr-number>`
-  - Deploy to LangGraph as preview deployment
-  - Update existing preview if it exists
-
-### 3. Production Deployment (`new-lgp-revision.yml`)
-- **Trigger:** PR closed (merged or not)
-- **Purpose:** Cleanup previews and deploy to production
-- **Jobs:**
-  - Cleanup preview deployment
-  - Build production Docker image (only if merged)
-  - Deploy to production (only if merged)
-
 ## Deployment Naming Convention
 
 - **Preview Deployments:** `text2sql-agent-pr-<pr-number>`
